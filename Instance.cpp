@@ -38,7 +38,9 @@ bool Instance::Sleep(){
 
 //The function we will go to when we are awake and we want to perform out actions
 //before we go back to sleep.
-bool Instance::PerformActions(){
+bool Instance::PerformActions(
+
+){
 	//Logic here that will determine which actions to perform based on the value of the current time
 	//Actions to perform:
 	//Check for user input
