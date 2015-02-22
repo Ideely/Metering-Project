@@ -13,7 +13,7 @@
 #include "Arduino.h"
 
 //User defined modules
-#include "Instance.h"											//Provides an abstracted definition for a metering instance
+#include "..\Instance\Instance.h"											//Provides an abstracted definition for a metering instance
 
 //Global Variables
 Instance currentInstance;	//The current instance object
