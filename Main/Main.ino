@@ -13,10 +13,10 @@
 #include "Arduino.h"
 
 //User defined modules
-#include "..\Instance\Instance.h"											//Provides an abstracted definition for a metering instance
+#include "Instance.h"											//Provides an abstracted definition for a metering instance
 
 //Global Variables
-Instance currentInstance;	//The current instance object
+Instance currentInstance();	//The current instance object
 
 void Setup() {
 	//Setup function, used for initializing variables, setting, classes

@@ -53,20 +53,28 @@ class Instance {
 		double currentTimeMillseconds;		//The time on the timer
 		double currentSleepCycle;			//The current sleep cycle that the instance is on	
 		
-		const int readUserInputInterval = 3;		//Check every 5 sleep cycles
-		const int readkMeteringInputInterval = 2;	//Check every 3 sleep cycles
-		const int talkLEDInterval = 1;				//Talk to them every 2 sleep cycles
-		const int talkScreenInterval = 1;			//Talk to it every 2 sleep cycles
+		const int readUserInputInterval;		//Check every 5 sleep cycles
+		const int readkMeteringInputInterval;	//Check every 3 sleep cycles
+		const int talkLEDInterval;				//Talk to them every 2 sleep cycles
+		const int talkScreenInterval;			//Talk to it every 2 sleep cycles
 
 		Sleep sleeper;			//The sleep object, will be used to perform rest operations
 		UserInput userIn;		//The user input object, will be used to evaluate any input from the user
 		MeterInput meterIn;		//The meter input object, will be used to read from the metering circuit
 		Screen screenOut;		//The screen output object, we will use it to communicate with our screen
-		
-		const int PIN_INTERRUPT = 2				//The pin for the interrupt. This cannot change.
-		const int PIN_POWER = -1;				//Pin that is associated with the power button
-		const int PIN_START = -1;				//The pin that is associated with the start button
-		const int PIN_METERING_COM = -1;		//The pin that is associated with the metering circuit
-		const int PIN_LEDS[] = {-1, -1, -1};	//The pin array that is associated with the LEDs
-		const int PIN_SCREEN[] = {-1, -1, -1};	//The pin array that is associated with the screen
+
+		const int PIN_POWER_BUTTON;
+		const int PIN_START_BUTTON;
+
+		const int PIN_LEDS;
+		const int PIN_METERING;
+
+		const int PIN_SCREEN_COMMUNICATION_DSIP;
+		const int PIN_SCREEN_COMMUNICATION_EXTX;
+		const int PIN_SCREEN_COMMUNICATION_EXTM;
+		const int PIN_SCREEN_COMMUNICATION_SI;
+		const int PIN_SCREEN_COMMUNICATION_SCS;
+		const int PIN_SCREEN_COMMUNICATION_SCLK;
 }
+
+#endif

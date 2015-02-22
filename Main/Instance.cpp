@@ -10,13 +10,33 @@
 *
 */
 
+#include "Instance.h"
+#include "Arduino.h"
+
+
+//The globals
+
 //The constructor, will initially set the state to be OFF
 //and will set the time information to 0
 Instance::Instance(){
 	//Specify which pins are to be used as input and output
 	//Example: pinMode(ledPin, OUTPUT);      // sets the digital pin as output
+	screen(
+		PIN_SCREEN_COMMUNICATION_DSIP = -1,
+		PIN_SCREEN_COMMUNICATION_EXTX = -1,
+		PIN_SCREEN_COMMUNICATION_EXTM = -1,
+		PIN_SCREEN_COMMUNICATION_SI = -1, 
+		PIN_SCREEN_COMMUNICATION_SCS = -1, 
+		PIN_SCREEN_COMMUNICATION_SCLK = -1
+	);
+	meterIn(PIN_METERING);
 	userIn(PIN_POWER, PIN_START);
 	state = OFF;
+	
+	readUserInputInterval = 3;		//Check every 5 sleep cycles
+	readkMeteringInputInterval = 2;	//Check every 3 sleep cycles
+	talkLEDInterval = 1;				//Talk to them every 2 sleep cycles
+	talkScreenInterval = 1;
 }
 
 //This function will start a new instance, changing it's state from OFF to STARTED
@@ -38,9 +58,7 @@ bool Instance::Sleep(){
 
 //The function we will go to when we are awake and we want to perform out actions
 //before we go back to sleep.
-bool Instance::PerformActions(
-
-){
+bool Instance::PerformActions(){
 	//Logic here that will determine which actions to perform based on the value of the current time
 	//Actions to perform:
 	//Check for user input
@@ -62,7 +80,6 @@ bool Instance::PerformActions(
 	}
 	if(sleepCycle % talkScreenInterval == 0) {
 		//Print the new screen on the memory LCD
-		char 
 	}
 
 	return true;
