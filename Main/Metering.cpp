@@ -14,8 +14,18 @@
 * library will also have a method for resetting the device.
 */
 
-Metering::Metering() {
-	//The constructor, initialize any initial settings that we may need to. 
+Metering::Metering(			
+			int dataIn,
+			int dataOut,
+			int clockSync,
+			int reset) 
+{
+	//The constructor, initialize any initial settings that we may need to.
+	pinDataIn = dataIn;
+	pinDataOut = dataOut;
+	
+	meteringCircuit()
+	
 }
 
 double Metering::ReadInstantaneousPower(){

@@ -10,14 +10,32 @@
 *
 */
 
-Screen::Screen(){
+Screen::Screen(int communicationDisp,
+			int communicationETX,
+			int communicationXTM,
+			int communicationSI, 
+			int communicationSCS, 
+			int communicationSCLK)
+{
 	//Initialize anything we need to here
+		pinDisp = communicationDisp;
+		pinETX = communicationETX;
+		pinXTM = communicationETM;
+		pinSI = communicationSI;
+		pinSCS = communicationSCS;
+		pinSCLK = communicationSCLK;	
 }
 
 bool Screen::Write(char message[]){
 	//Will write the the character array message to the screen and will
 	//return true if there is no error in the process.
-
+	
+	for(int count = 0; count < message; count ++)
+	{
+		screebObject.write(message[count]);
+	}
+	
+	return true;
 }
 
 bool Screen::Clear() {

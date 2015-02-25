@@ -25,7 +25,12 @@
 class Metering
 {
 	public:
-		Metering();			//Initialize the Meter object.
+		Metering( 
+			int dataIn,
+			int dataOut,
+			int clockSync,
+			int reset
+		);			//Initialize the Meter object.
 		
 		double ReadInstantaneousPower();	//Read the power being measured at that moment.
 		double ReadTotalEnergy();			//Read the total power developed up to this point.
@@ -33,7 +38,11 @@ class Metering
 		bool Reset();						//Reset the device and the device cache.
 
 	private:
-	
+		int pinDataIn;
+		int pinDataOut;
+		int pinClockSync;
+		int pinReset;
+		
 		ADE7753 meteringCircuit;
 		
 }

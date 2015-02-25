@@ -20,10 +20,26 @@
 class Screen {
 	
 	public:
+		Screen(							
+			int communicationDisp,
+			int communicationETX,
+			int communicationXTM,
+			int communicationSI, 
+			int communicationSCS, 
+			int communicationSCLK
+		);								//The constructor for the object.
+		
 		bool Write(char message[]);		//Send a message to the screen
 		bool Clear();					//Clear the screen
 		bool Flash();					//Quickly make the screen flash (by inverting and un-inverting it quickly)
 	private:
+		int pinDisp;					//WHAT DOES THIS DO?
+		int pinETX;						//WHAT DOES THIS DO?
+		int pinXTM;						//WHAT DOES THIS DO?
+		int pinSI;						//WHAT DOES THIS DO?
+		int pinSCS;						//WHAT DOES THIS DO?
+		int pinSCLK;					//The clock signal for the screen	
+	
 		SHARPMEMORYLCD screenObject;	//The library for talking to the Sharp Memory LCD
 		int flashDelay;					//The number of microseconds to delay between inverting when flashing the screen
 	
