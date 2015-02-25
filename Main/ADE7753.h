@@ -1,3 +1,5 @@
+
+
 /* ADE7753.h = Class constructor and function implementation for Olimex Energy Shield using ADE7753)
 ====================================================================================================
 V1.0
@@ -51,6 +53,14 @@ figure out when an an interrupt flag has be set.
 
 #ifndef ADE7753_H
 #define ADE7753_H
+
+
+#include <string.h>
+#include <avr/pgmspace.h>
+#include "ADE7753.h"
+#include <avr/wdt.h> // Watchdog timer
+#include <SPI.h>
+
 
 /***
  * Defines

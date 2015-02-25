@@ -54,12 +54,8 @@ figure out when an an interrupt flag has be set.
 #else
 #include <WProgram.h> // Arduino 0022+
 #endif
-#include <string.h>
-#include <avr/pgmspace.h>
-#include "SPI.h"
-#include "ADE7753.h"
-#include <avr/wdt.h> // Watchdog timer
 
+#include "ADE7753.h"
 
 /** === setSPI ===
 * Class constructor, sets chip select pin (CS define) and SPI communication with arduino.
