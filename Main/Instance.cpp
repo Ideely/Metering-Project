@@ -29,7 +29,12 @@ Instance::Instance(){
 		PIN_SCREEN_COMMUNICATION_SCS = -1, 
 		PIN_SCREEN_COMMUNICATION_SCLK = -1
 	);
-	meterIn(PIN_METERING);
+	meterIn(
+		PIN_METER_DATA_IN = 0,
+		PIN_METER_DATA_OUT = 1,
+		PIN_METER_CLOCK_SYNC = 2,
+		PIN_METER_RESET = 3;
+	);
 	userIn(PIN_POWER, PIN_START);
 	state = OFF;
 	

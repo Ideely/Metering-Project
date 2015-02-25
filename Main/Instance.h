@@ -66,8 +66,14 @@ class Instance {
 		const int PIN_POWER_BUTTON;
 		const int PIN_START_BUTTON;
 
-		const int PIN_LEDS;
-		const int PIN_METERING;
+		const int PIN_LED_DATA;
+		const int PIN_LED_LATCH;
+		const int PIN_LED_CLOCK;
+		
+		const int PIN_METER_DATA_IN;
+		const int PIN_METER_DATA_OUT;
+		const int PIN_METER_CLOCK_SYNC;
+		const int PIN_METER_RESET;
 
 		const int PIN_SCREEN_COMMUNICATION_DSIP;
 		const int PIN_SCREEN_COMMUNICATION_EXTX;
