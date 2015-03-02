@@ -76,6 +76,7 @@ bool Instance::PerformActions(){
 	voltage = GetAnalogVoltageInput();
 	leds.LEDwrite(leds.ConvertPower(voltage, 5));
 	
+	/*
 	if(sleepCycle % readUserInputInterval == 0){
 		//HandleButtonPresses();	//Read user input, such as restart, start, timer, etc.
 	}
@@ -92,7 +93,8 @@ bool Instance::PerformActions(){
 	if(sleepCycle % talkScreenInterval == 0) {
 		//Print the new screen on the memory LCD
 	}
-
+	*/
+	
 	return true;
 }
 
