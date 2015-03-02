@@ -28,4 +28,3 @@ void loop() {
 	currentInstance.Sleep();							//Sleep for the interval (30ms)
 	currentInstance.PerformActions();	//Perform relevant action
 }
-

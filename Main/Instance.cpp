@@ -21,6 +21,8 @@
 Instance::Instance(){
 	//Specify which pins are to be used as input and output
 	//Example: pinMode(ledPin, OUTPUT);      // sets the digital pin as output
+	
+	/* TESTING ONLY
 	screen(
 		PIN_SCREEN_COMMUNICATION_DSIP = -1,
 		PIN_SCREEN_COMMUNICATION_EXTX = -1,
@@ -36,6 +38,8 @@ Instance::Instance(){
 		PIN_METER_RESET = 3;
 	);
 	userIn(PIN_POWER, PIN_START);
+	*/
+	
 	state = OFF;
 	
 	readUserInputInterval = 3;		//Check every 5 sleep cycles
@@ -73,15 +77,17 @@ bool Instance::PerformActions(){
 	double meterReading 0;
 	
 	if(sleepCycle % readUserInputInterval == 0){
-		HandleButtonPresses();	//Read user input, such as restart, start, timer, etc.
+		//HandleButtonPresses();	//Read user input, such as restart, start, timer, etc.
 	}
 	if(sleepCycle % readkMeteringInputInterval == 0) {
-		meterReading = ReadInstantaneousPowerFromMeter();	//Read metering input
+		//meterReading = ReadInstantaneousPowerFromMeter();	//Read metering input
 	}
 	if(sleepCycle % talkLEDInterval == 0) {
 		//Display the current power being produced to the LEDs
 		//Clark, call your LED talking function. We'll give you a number, you convert it into a serial stream
 		//and send it to the LEDS
+		
+		//FOR TESTING ONLY
 	}
 	if(sleepCycle % talkScreenInterval == 0) {
 		//Print the new screen on the memory LCD

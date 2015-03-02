@@ -59,9 +59,9 @@ class Instance {
 		const int talkScreenInterval;			//Talk to it every 2 sleep cycles
 
 		Sleep sleeper;			//The sleep object, will be used to perform rest operations
-		UserInput userIn;		//The user input object, will be used to evaluate any input from the user
-		MeterInput meterIn;		//The meter input object, will be used to read from the metering circuit
-		Screen screenOut;		//The screen output object, we will use it to communicate with our screen
+		//UserInput userIn;		//The user input object, will be used to evaluate any input from the user
+		//MeterInput meterIn;		//The meter input object, will be used to read from the metering circuit
+		//Screen screenOut;		//The screen output object, we will use it to communicate with our screen
 
 		const int PIN_POWER_BUTTON;
 		const int PIN_START_BUTTON;
