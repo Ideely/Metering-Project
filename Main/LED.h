@@ -1,6 +1,6 @@
 /*
-Title: LED.h
-Authors: Clark Asher
+* Title: LED.h
+* Authors: Clark Asher
 * Group: The A Team
 * For: Senior Design - Metering Project
 * Date: 2/18/2015
@@ -12,13 +12,15 @@ Authors: Clark Asher
 #ifndef LED_h
 #define LED_h
 
-class Bargraph
+class LED
 {
 	public:
-
-		Bargraph();
+		LED();
 	
 		unsigned int ConvertPower();   //converts instantaneous power to binary data
-		bool LEDwrite();   //triggers LEDs for bargraph
-
+		bool LEDwrite();   				//triggers LEDs for bargraph
+	private:
+		int PIN_DATA;
+		int PIN_LATCH;
+		int PIN_CLOCK;
 };

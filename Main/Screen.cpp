@@ -40,6 +40,8 @@ bool Screen::Write(char message[]){
 
 bool Screen::Clear() {
 	//Clears the screen, will return true if there wasn't an error
+	
+	screen
 }
 
 bool Screen::Flash() {

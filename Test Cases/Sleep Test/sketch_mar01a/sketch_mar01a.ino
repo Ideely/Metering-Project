@@ -15,7 +15,7 @@ void loop() {
   sensorValue = analogRead(A1);
   voltage = sensorValue * (5.0 / 1023.0);
   Serial.print("The sensor value is: ");
-  Serial.print(sensorValue);
+  Serial.print(voltage);
   Serial.print("\r\n"); 
   
   if(sensorValue >= 300) {
